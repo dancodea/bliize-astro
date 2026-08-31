@@ -88,3 +88,36 @@ const { footerClass = "wpo-site-footer" } = Astro.props;
     </div>
   </div>
 </footer>
+
+<style is:global>
+  .wpo-site-footer .social-widget ul {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .wpo-site-footer .social-widget ul li {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  .wpo-site-footer .social-widget ul li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    color: #fff !important;
+    margin-right: 0 !important;
+    transition: color 0.3s ease !important;
+    text-decoration: none !important;
+  }
+  .wpo-site-footer .social-widget ul li a:hover {
+    color: #e3b576 !important;
+  }
+</style>
