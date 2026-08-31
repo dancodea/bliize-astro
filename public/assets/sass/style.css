@@ -7163,11 +7163,27 @@ img {
   border: 0;
   margin-top: 30px;
 }
+.wpo-site-footer .social-widget ul {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.wpo-site-footer .social-widget ul li {
+  display: inline-flex !important;
+  align-items: center !important;
+}
 .wpo-site-footer .social-widget ul li a {
-  display: inline-block;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   font-size: 18px;
   color: #fff;
-  margin-right: 20px;
+  margin-right: 0 !important;
+  transition: all 0.3s ease;
 }
 .wpo-site-footer .social-widget ul li a:hover {
   color: #e3b576;
