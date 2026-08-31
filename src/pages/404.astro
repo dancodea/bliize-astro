@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const headerProps = {
+  "headerStyle": "wpo-header-style-s11",
+  "topbar": true,
+  "topbarStyle": "topbar topbar-s2",
+  "logo": "/assets/images/logo.svg"
+};
+const footerProps = {};
+---
+
+<BaseLayout title="Bliize | Architecture Construction Template" headerProps={headerProps} footerProps={footerProps}>
+  <!-- start preloader -->
+                <!-- end preloader -->
+
+        <!--  cursor style -->
+        
+        
+
+        <!-- Start header -->
+        
+        <!-- end of header -->
+
+        <!-- start wpo-page-title -->
+                <!-- start page-title -->
+<section class="wpo-page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="wpo-breadcumb-wrap">
+                    <ol>
+                                                    <li>Home / 404</li>
+                                            </ol>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end page-title -->        <!-- end page-title -->
+
+        <!-- start error-404-section -->
+        <section class="error-404-section section-padding pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="content clearfix">
+                            <div class="error">
+                                <img src="/assets/images/error-404.png" alt="">
+                            </div>
+                            <div class="error-message">
+                                <h3>Oops! Page Not Found!</h3>
+                                <p>We’re sorry but we can’t seem to find the page you requested. This might be
+                                    because
+                                    you have typed the web address incorrectly.</p>
+                                <a href="/" class="theme-btn">Back to home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end error-404-section -->
+
+        <!-- start wpo-site-footer -->
+                <!-- end wpo-site-footer -->
+</BaseLayout>

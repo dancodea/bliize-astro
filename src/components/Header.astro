@@ -1,0 +1,343 @@
+---
+interface Props {
+  headerStyle?: string;
+  topbar?: boolean;
+  topbarStyle?: string;
+  logo?: string;
+  showCart?: boolean;
+  showSearch?: boolean;
+  showUser?: boolean;
+  showContactBtn?: boolean;
+  contactBtnText?: string;
+  contactBtnHref?: string;
+}
+
+const {
+  headerStyle = "wpo-header-style",
+  topbar = false,
+  topbarStyle = "topbar topbar-s2",
+  logo = "/assets/images/logo-2.svg",
+  showCart = false,
+  showSearch = true,
+  showUser = false,
+  showContactBtn = true,
+  contactBtnText = "Contact Us",
+  contactBtnHref = "/contact",
+} = Astro.props;
+---
+
+<header id="header">
+  {topbar && (
+    <div class={topbarStyle}>
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-8 col-md-8 col-12">
+            <ul class="contact-info">
+              <li>
+                <a href="tel:+887869587496">
+                  Call Us:
+                  <span>+ +869 968 236</span>
+                </a>
+              </li>
+              <li>
+                <span>Email Us:</span>
+                <span>bliize@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="contact-into">
+              <ul class="social-media">
+                <li><a href="#" aria-label="Facebook"><i class="ti-facebook"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="ti-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <div class={`wpo-site-header ${headerStyle}`}>
+    <nav class="navigation navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+            <div class="mobail-menu">
+              <button type="button" class="navbar-toggler open-btn" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar first-angle"></span>
+                <span class="icon-bar middle-angle"></span>
+                <span class="icon-bar last-angle"></span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/"><img src={logo} alt="Bliize Logo" /></a>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-1 col-1">
+            <div id="navbar" class="collapse navbar-collapse navigation-holder">
+              <button class="menu-close" aria-label="Close menu"><i class="ti-close"></i></button>
+              <ul class="nav navbar-nav mb-2 mb-lg-0">
+                <li class="menu-item-has-children image-style-item">
+                  <a href="#">Home</a>
+                  <ul class="sub-menu image-style">
+                    <li>
+                      <a href="/">
+                        <small class="inner">
+                          <img src="/assets/images/home/modern-architecture.jpg" alt="Modern Architecture" />
+                        </small>
+                        <span>Modern Architecture</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-classic-architecture">
+                        <small class="inner">
+                          <img src="/assets/images/home/classic-architecture.jpg" alt="Classic Architecture" />
+                        </small>
+                        <span>Classic Architecture</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-modern-architecture-s2">
+                        <small class="inner">
+                          <img src="/assets/images/home/modern-architecture-s2.jpg" alt="Modern Architecture 02" />
+                        </small>
+                        <span>Modern Architecture 02</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-classic-architecture-dark">
+                        <small class="inner">
+                          <img src="/assets/images/home/classic-architecture-dark.jpg" alt="Classic Architecture Dark" />
+                        </small>
+                        <span>Classic Architecture Dark</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-classic-interior-design">
+                        <small class="inner">
+                          <img src="/assets/images/home/classic-interior-design.jpg" alt="Classic Interior Design" />
+                        </small>
+                        <span>Classic Interior Design</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-classic-interior-design-s2">
+                        <small class="inner">
+                          <img src="/assets/images/home/classic-interior-design-s2.jpg" alt="Classic Interior Design 02" />
+                        </small>
+                        <span>Classic Interior Design 02</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-classic-interior-design-dark">
+                        <small class="inner">
+                          <img src="/assets/images/home/classic-interior-design-dark.jpg" alt="Classic Interior Design Dark" />
+                        </small>
+                        <span>Classic Interior Design Dark</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-renovation">
+                        <small class="inner">
+                          <img src="/assets/images/home/renovation.jpg" alt="Renovation" />
+                        </small>
+                        <span>Renovation</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-modern-woocommerce">
+                        <small class="inner">
+                          <img src="/assets/images/home/modern-woocommerce.jpg" alt="Modern Woocommerce" />
+                        </small>
+                        <span>Modern Woocommerce</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-minimal-woocommerce">
+                        <small class="inner">
+                          <img src="/assets/images/home/minimal-woocommerce-s2.jpg" alt="Minimal Woocommerce" />
+                        </small>
+                        <span>Minimal Woocommerce</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-urban-planning">
+                        <small class="inner">
+                          <img src="/assets/images/home/urban-planning.jpg" alt="Urban Planning" />
+                        </small>
+                        <span>Urban Planning</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-costruction">
+                        <small class="inner">
+                          <img src="/assets/images/home/costruction.jpg" alt="Construction" />
+                        </small>
+                        <span>Costruction</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-costruction-s2">
+                        <small class="inner">
+                          <img src="/assets/images/home/costruction-s2.jpg" alt="Construction 02" />
+                        </small>
+                        <span>Costruction 02</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-costruction-profile">
+                        <small class="inner">
+                          <img src="/assets/images/home/construction-profile.jpg" alt="Construction Profile" />
+                        </small>
+                        <span>Costruction Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/bliize-frelancer-architect">
+                        <small class="inner">
+                          <img src="/assets/images/home/frelancer-architect.jpg" alt="Freelancer Architect" />
+                        </small>
+                        <span>Frelancer Architect</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Pages</a>
+                  <ul class="sub-menu">
+                    <li><a href="/about">About Us</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Services</a>
+                      <ul class="sub-menu">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/service-single">Service single</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Team</a>
+                      <ul class="sub-menu">
+                        <li><a href="/team">Team</a></li>
+                        <li><a href="/team-single">Team single</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/terms">Terms</a></li>
+                    <li><a href="/404">404 Error</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Projects</a>
+                  <ul class="sub-menu">
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/project-single">Projects Single</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Shop</a>
+                  <ul class="sub-menu">
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/shop-single">Shop Single</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                    <li><a href="/checkout">Checkout</a></li>
+                    <li><a href="/wishlist">Wishlist</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Blog</a>
+                  <ul class="sub-menu">
+                    <li><a href="/blog">Blog right sidebar</a></li>
+                    <li><a href="/blog-left-sidebar">Blog left sidebar</a></li>
+                    <li><a href="/blog-fullwidth">Blog fullwidth</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Blog details</a>
+                      <ul class="sub-menu">
+                        <li><a href="/blog-single">Blog details right sidebar</a></li>
+                        <li><a href="/blog-single-left-sidebar">Blog details left sidebar</a></li>
+                        <li><a href="/blog-single-fullwidth">Blog details fullwidth</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-2">
+            <div class="header-right">
+              {showSearch && (
+                <div class="header-search-form-wrapper">
+                  <div class="cart-search-contact">
+                    <button class="search-toggle-btn" aria-label="Search"><i class="fi flaticon-loupe"></i></button>
+                    <div class="header-search-form">
+                      <form action="#" onsubmit="return false;">
+                        <div>
+                          <input type="text" class="form-control" placeholder="Search here..." />
+                          <button type="submit" aria-label="Submit search"><i class="fi flaticon-loupe"></i></button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {showUser && (
+                <div class="header-user-wrapper">
+                  <button class="user-toggle-btn" aria-label="User Account"><i class="fi flaticon-user"></i></button>
+                  <div class="header-user-form">
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                  </div>
+                </div>
+              )}
+
+              {showCart && (
+                <div class="mini-cart">
+                  <button class="cart-toggle-btn" aria-label="Shopping Cart">
+                    <i class="fi flaticon-shopping-cart"></i>
+                    <span class="cart-count">2</span>
+                  </button>
+                  <div class="mini-cart-content">
+                    <button class="mini-cart-close" aria-label="Close Cart"><i class="ti-close"></i></button>
+                    <div class="mini-cart-items">
+                      <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-item-image">
+                          <a href="/shop-single"><img src="/assets/images/shop/1.jpg" alt="Product" /></a>
+                        </div>
+                        <div class="mini-cart-item-des">
+                          <a href="/shop-single">Architecture Lamp</a>
+                          <span class="mini-cart-item-price">$150.00 x 1</span>
+                          <span class="mini-cart-item-quantity"><a href="#"><i class="ti-close"></i></a></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mini-cart-action clearfix">
+                      <span class="mini-checkout-price">Subtotal: <span>$150.00</span></span>
+                      <div class="mini-btn">
+                        <a href="/checkout" class="view-cart-btn s1">Checkout</a>
+                        <a href="/cart" class="view-cart-btn">View Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {showContactBtn && (
+                <div class="close-form">
+                  <a class="theme-btn" href={contactBtnHref}>{contactBtnText}</a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
